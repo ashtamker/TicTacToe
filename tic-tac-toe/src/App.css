@@ -18,3 +18,24 @@
   height: 95px;
   background-color:lightblue;
 }
+
+.warp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background: #333;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background: royalblue;
+  width: 300px;
+  box-shadow: 6px 6px 5px orange;
+}

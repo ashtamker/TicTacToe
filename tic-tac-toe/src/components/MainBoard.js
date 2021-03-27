@@ -1,6 +1,7 @@
 import React from 'react';
 import  '../App.css';
 
+
 class MainBoard extends React.Component {
 
     
@@ -17,6 +18,7 @@ class MainBoard extends React.Component {
                <div />
                <div />
                <div />
+               
            </div> 
         )
     }

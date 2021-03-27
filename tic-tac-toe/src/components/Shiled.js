@@ -1,13 +1,13 @@
 import React from 'react';
-import '../icon/Shield.svg';
+import {ReactComponent as ShiledLogo } from '../icon/Shiled.svg';
 
 export default function Shiled(props) {
     const size = props.size || 100;
 
 
     return (
-        <svg>
-            Shiled
-        </svg>
+        <div>
+            <ShiledLogo />
+        </div>
     )
 } 
