@@ -39,3 +39,30 @@
   width: 300px;
   box-shadow: 6px 6px 5px orange;
 }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 10vh;
+
+}
+
+.title {
+  width: 30%;
+}
+
+.score {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 70%;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
