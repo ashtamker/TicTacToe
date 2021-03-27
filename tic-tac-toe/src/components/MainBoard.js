@@ -51,7 +51,88 @@ class MainBoard extends React.Component {
         }
     };
 
-    
+        diagonal = (play) => {
+            let left = [
+                document.getElementById("tile0").innerHTML,
+                document.getElementById("tile4").innerHTML,
+                document.getElementById("tile8").innerHTML,
+            ];
+            let right = [
+                document.getElementById("tile2").innerHTML,
+                document.getElementById("tile4").innerHTML,
+                document.getElementById("tile6").innerHTML,
+            ];
+            if(left[0] === play && left[1] === play && left[2] === play){
+                return true;
+            }
+            if(right[0] === play && right[1] === play && right[2] === play){
+                return true;
+            }
+            return false;
+
+        };
+
+
+        row = (paly) => {
+            let row1 = [
+                document.getElementById("tile0").innerHTML,
+                document.getElementById("tile1").innerHTML,
+                document.getElementById("tile2").innerHTML,
+            ];
+            let row2 = [
+                document.getElementById("tile3").innerHTML,
+                document.getElementById("tile4").innerHTML,
+                document.getElementById("tile5").innerHTML,
+            ];
+            let row3 = [
+                document.getElementById("tile6").innerHTML,
+                document.getElementById("tile7").innerHTML,
+                document.getElementById("tile8").innerHTML,
+            ];
+
+            if(row1[0] === play && row1[1] === play && row1[2] === play){
+                return true;
+            }
+            if(row2[0] === play && row2[1] === play && row2[2] === play){
+                return true;
+            }
+            if(row3[0] === play && row3[1] === play && row3[2] === play){
+                return true;
+            }
+            return false;
+
+        };
+
+        column = (paly) => {
+            let column1 = [
+                document.getElementById("tile0").innerHTML,
+                document.getElementById("tile3").innerHTML,
+                document.getElementById("tile6").innerHTML,
+            ];
+            let column2 = [
+                document.getElementById("tile1").innerHTML,
+                document.getElementById("tile4").innerHTML,
+                document.getElementById("tile7").innerHTML,
+            ];
+            let column3 = [
+                document.getElementById("tile2").innerHTML,
+                document.getElementById("tile5").innerHTML,
+                document.getElementById("tile8").innerHTML,
+            ];
+
+            if(column1[0] === play && column1[1] === play && column1[2] === play){
+                return true;
+            }
+            if(column2[0] === play && column2[1] === play && column2[2] === play){
+                return true;
+            }
+            if(column3[0] === play && column3[1] === play && column3[2] === play){
+                return true;
+            }
+            return false;
+
+        };
+        
 
 }
 
