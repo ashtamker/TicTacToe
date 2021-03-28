@@ -6,7 +6,7 @@ class MainBoard extends React.Component {
 
     makeTheBoard = () => {
         let tile = [];
-        for(let i =0; i < 9; i++){
+        for(let i = 0; i < 9; i++){
             tile.push("tile empty")
         }
         return tile;
@@ -30,7 +30,7 @@ class MainBoard extends React.Component {
 
     play = (tile) => {
         const {player1, player2, turn, handleScore, endgame} = this.props;
-        tile.classList.remove(not-played);
+        tile.classList.remove("empty");
         if(player1){
             tile.innerHTML = "X";
             turn("player1", false,"player2", true);
@@ -73,7 +73,7 @@ class MainBoard extends React.Component {
         };
 
 
-        row = (paly) => {
+        row = (play) => {
             let row1 = [
                 document.getElementById("tile0").innerHTML,
                 document.getElementById("tile1").innerHTML,
@@ -103,7 +103,7 @@ class MainBoard extends React.Component {
 
         };
 
-        column = (paly) => {
+        column = (play) => {
             let column1 = [
                 document.getElementById("tile0").innerHTML,
                 document.getElementById("tile3").innerHTML,
@@ -132,7 +132,29 @@ class MainBoard extends React.Component {
             return false;
 
         };
-        
+
+        reset = () => {
+            let tiles = document.querySelector(".tile");
+            for(let i = 0; i < 9; i++){
+                tiles[i].innerHTML = "";
+                tiles[i].classList.add("empty");
+            }
+        };
+
+        render(){
+            return (
+                <div className="board">
+                    {this.makeTheBoard().map((e, i) => {
+                     return (
+                         <div id={`tile${i}`} key={i} className={e}
+                         onClick={this.handleOnClick} />
+                     );
+                    }
+                    )
+                }
+                </div>
+            );
+        }
 
 }
 

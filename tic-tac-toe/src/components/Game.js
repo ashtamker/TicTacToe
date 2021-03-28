@@ -10,14 +10,14 @@ class Game extends React.Component {
         player2: false,
         check: true,
     };
-}
+
 
 turnOrder = (firstPlayer, bool1, secondPlayer, bool2) => {
     this.setState({
         [firstPlayer]: bool1,
         [secondPlayer]: bool2, 
     });
-
+};
     render() {
         const {player1, player2} = this.state;
         const {userName1, userName2, endgame} = this.props;
