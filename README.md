@@ -1,3 +1,3 @@
 # TicTacToe
 
-simple version of the game for P Vs P
+simple version of the game for P Vs P!
